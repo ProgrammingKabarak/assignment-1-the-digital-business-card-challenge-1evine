@@ -3,22 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>levine and associates</title>
+    <title>Company Registration Form</title>
 </head>
 <body>
-    <h1 style="text-align: center;">Levine and Associates</h1>
-    <img src="ChatGPT Image Jun 9, 2026, 03_41_51 PM.png" alt="Levine and Associates"> 
-    <p>Welcome to Levine and Associates.Where all your digital needs are met.We offer a wide range of services  which include ;</p>
-<ol>
-    <li>Web Design</li>
-    <li>App Development</li>
-    <li>Digital Marketing</li>
-</ol>
-<p>Contact us today to learn more about how we can help you achieve your digital goals.Here are our webpages:</p>
-<ul>
-    <li><button><a href="https://www.linkedin.com/">LinkedIn</a></button></li><br>
-    <li><button><a href="https://www.facebook.com/">Facebook</a></button></li><br>
-    <li><button><a href="https://twitter.com/">Twitter</a></button></li><br>
-</ul>
+    <h1 style="text-align: center;">Company Registration Form</h1>
+    <form action="submit" method="post">
+        <fieldset>
+            <legend style="text-align: center;">Personal Information</legend>
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" placeholder="levine" required><br><br>        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="levine @company.com" required><br><br>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="0712 345 678" minlength="10" maxlength="15" required><br><br>
+        </fieldset>
+        <fieldset>
+            <legend style="text-align: center;">Company Information</legend>
+            <label for="companyName">Company Name:</label>
+            <input type="text" id="companyName" name="companyName" placeholder="levine and associates" required><br><br>
+            <label for="companywebsite">Company website:</label>
+            <input type="url" id="companywebsite" name="companywebsite" placeholder="https://www.levineandassociates.com" required><br><br>
+            <label for="companySize">Company size:</label>
+            <select id="companySize" name="companySize" required>
+                <option value="">Select company size</option>
+                <option value="small">Small (1-50 employees)</option>
+                <option value="medium">Medium (51-250 employees)</option>
+                <option value="large">Large (251+ employees)</option>
+            </select><br><br>
+        </fieldset>
+
+        <label >Service type:</label>
+        <input type="radio" id="service1" name="services" value="consulting" required>
+        <label for="service1">Consulting</label>
+        <input type="radio" id="service2" name="services" value="training" required>
+        <label for="service2">Training</label>
+        <input type="radio" id="service3" name="services" value="support" required>
+        <label for="service3">Support</label><br><br>
+
+        <label>Contact method:</label>
+        <label for="contactEmail">Email</label>
+        <input type="checkbox" id="contactEmail" name="contactMethod" value="email">
+        <label for="contactPhone">Phone</label>
+        <input type="checkbox" id="contactPhone" name="contactMethod" value="phone">
+        <label for="contactInPerson">In-person</label>
+        <input type="checkbox" id="contactInPerson" name="contactMethod" value="inPerson">
+        <label for="contactOtherways">Other ways</label>
+        <input type="checkbox" id="contactOtherways" name="contactMethod" value="other">
+        <br><br> 
+
+        <label for="time">Appointment Time:</label>
+        <input type="time" id="time" name="time" required><br><br>
+        <label for="date">Appointment Date:</label>
+        <input type="date" id="date" name="date" required><br><br>
+            <label for="budget">Budget range:</label><br>
+            <input type="number" id="budget" name="budget" placeholder="Enter your budget here..." min="0"  required><br><br>
+            <label for="message">Additional Information:</label>
+            <textarea id="message" name="message" placeholder="Please provide any additional information here..."></textarea><br><br>
+            <label for="agreement">I agree to the terms and conditions:</label>
+            <input type="checkbox" id="agreement" name="agreement" required>
+            <br><br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Refresh">
+    </form>
 </body>
 </html>
